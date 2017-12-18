@@ -58,9 +58,11 @@ void loop()
       Serial.println((char*) slider.lastread);
       int value = atoi((const char *)slider.lastread);  //converting the character received from adafruit to integer type
       
-      analogWrite(LED_BUILTIN, (1023-(value/10)*102));  //analog write for PWM active low logic
-      //highest value for pwm can be 1024 in our case, to divide it into 10 steps we use (1023-(value/10)*102)
-      //highest value 1023 is not reached in our code as we are not dividing by 102.4 precisely to avoid floating point operations
+      analogWrite(LED_BUILTIN, (1023-(value/10)*102));  //analog write for PWM active low logic for the  built it LED
+      /*when using an external led or any PWM actuator use the lower line 
+	analogWrite(LED_BUILTIN, (value/10)*102);*/
+      /*highest value for pwm can be 1024 in our case, to divide it into 10 steps we use (1023-(value/10)*102)
+	highest value 1023 is not reached in our code as we are not dividing by 102.4 precisely to avoid floating point operations*/
     }
   }
 
