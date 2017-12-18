@@ -56,7 +56,7 @@ void loop()
       //Print the new value to the serial monitor
       Serial.print("value: ");
       Serial.println((char*) slider.lastread);
-      int value = atoi((const char *)slider.lastread);  //converting the char received from adafruit to int type
+      int value = atoi((const char *)slider.lastread);  //converting the character received from adafruit to integer type
       
       analogWrite(LED_BUILTIN, (1023-(value/10)*102));  //analog write for PWM active low logic
       //highest value for pwm can be 1024 in our case, to divide it into 10 steps we use (1023-(value/10)*102)
