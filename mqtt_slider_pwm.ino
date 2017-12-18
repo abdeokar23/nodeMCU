@@ -17,7 +17,7 @@ WiFiClient client;
 Adafruit_MQTT_Client mqtt(&client, MQTT_SERV, MQTT_PORT, MQTT_NAME, MQTT_PASS);
 
 //Set up the feed you're subscribing to
-Adafruit_MQTT_Subscribe slider = Adafruit_MQTT_Subscribe(&mqtt, MQTT_NAME "/feeds/slider");
+Adafruit_MQTT_Subscribe slider = Adafruit_MQTT_Subscribe(&mqtt, MQTT_NAME "/feeds/slider"); //enter your feed name accordingly
 
 void setup()
 {
