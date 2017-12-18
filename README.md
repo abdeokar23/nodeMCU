@@ -2,7 +2,7 @@ io.adafruit example to use pwm.
 ===============================
 
 This code(mqtt_slider_pwm.ino) explores the slider utility provided on io.adafruit.com.
-This example assumes you are familiar with io.adafruit usage(id, token feeds, dashboard) creation.
+This example assumes you are familiar with io.adafruit usage(id, AIO key, feeds, dashboard) creation.
 
 1. Create a feed on io.adafruit.com, name it whatever you want.
 2. Create a dashboard, give it some name and in the next dialog box link it with the feed you created in the first step.
